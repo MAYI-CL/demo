@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax实战--城市信息级联操作</title>
+	<script type="text/javascript" src="/static/jquery-3.5.1.min.js"></script>
+	<script>
+		$(function(){
+			//alert('ok');
+			$.ajax({
+				type:'get',
+				url:'{% url 'district' 1 %}',
+				dataType:'json',
+				async:false,
+				success:function(res){
+					alert(res['data'][0]['district_name']);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<h2>Ajax实战--城市信息级联操作</h2>
+</body>
+</html>

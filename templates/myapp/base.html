@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title1 %}{% endblock %}</title>
+</head>
+<body>
+	<h2>{% block title2 %}父模板标题{% endblock %}</h2>
+	<p>
+		{% block mycontent %}
+		此处预留内容区域
+		{% endblock %}
+	</p>
+</body>
+</html>
